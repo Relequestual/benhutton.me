@@ -15,9 +15,24 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'apple-touch-icon', type: 'image/png', sizes:"32x32", href: '/apple-touch-icon.png' },
-      { rel: 'icon', type: 'image/png', sizes:"32x32", href: '/favicon-32x32.png' },
-      { rel: 'icon', type: 'image/png', sizes:"16x16", href: '/favicon-16x16.png' }
+      {
+        rel: 'apple-touch-icon',
+        type: 'image/png',
+        sizes: '32x32',
+        href: '/apple-touch-icon.png',
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '32x32',
+        href: '/favicon-32x32.png',
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '16x16',
+        href: '/favicon-16x16.png',
+      },
     ],
   },
 
@@ -36,6 +51,7 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@aceforth/nuxt-optimized-images',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -43,4 +59,9 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  optimizedImages: {
+    optimizeImages: true,
+    optimizeImagesInDev: true,
+  },
 }
