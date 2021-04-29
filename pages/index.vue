@@ -3,29 +3,91 @@
     class="container bg-black bg-center bg-contain bg-no-repeat mx-auto grid min-h-screen justify-center"
   >
     <div class="my-auto">
+      <img
+        class="mx-auto rounded-full -mb-7 border-2 border-white"
+        src="~/assets/face.jpg?resize&size=150"
+      />
       <div class="border-2 border-white my-auto bg-gray-50 bg-opacity-50">
-        <img
-          class="mx-auto rounded-full -mt-28 mb-4 border-2 border-white"
-          src="~/assets/face.jpg?resize&size=150"
-        />
-        <h1 class="text-4xl text-center mb-4">Ben Hutton</h1>
+        <h1 class="text-4xl text-center mb-4 mt-8">Ben Hutton</h1>
         <div class="">
           <a
-            href="https://nuxtjs.org/"
+            href="https://twitter.com/relequestual"
             target="_blank"
-            rel="noopener noreferrer"
-            class="button--green"
+            rel="noopener"
+            class="text-twitter-blue btn block"
           >
-            Documentation
+            <font-awesome-icon :icon="['fab', 'twitter']" />
+            Twitter
           </a>
-          <!-- <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a> -->
+          <a
+            href="https://json-schema.org"
+            target="_blank"
+            rel="noopener"
+            class="btn block"
+          >
+            { JSON Schema }
+          </a>
+          <a
+            href="https://jsonschema.dev"
+            target="_blank"
+            rel="noopener"
+            class="btn block text-green-600"
+          >
+            {<font-awesome-icon :icon="['fa', 'check-double']" />} JSON Schema
+            Dev
+          </a>
+          <a
+            href="https://jsonschema.dev"
+            target="_blank"
+            rel="noopener"
+            class="btn block"
+          >
+            JSON Schema Book
+          </a>
+          <a
+            href="https://www.buymeacoffee.com/relequestual"
+            target="_blank"
+            rel="noopener"
+            class="text-yellow-500 btn block"
+          >
+            <font-awesome-icon :icon="['fa', 'coffee']" />
+            Buy me a coffee
+          </a>
+          <a
+            href="https://github.com/relequestual"
+            target="_blank"
+            rel="noopener"
+            class="btn block"
+          >
+            <font-awesome-icon :icon="['fab', 'github']" />
+            GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/benhuttonuk/"
+            target="_blank"
+            rel="noopener"
+            class="btn block text-blue-700"
+          >
+            <font-awesome-icon :icon="['fab', 'linkedin']" />
+            LinkedIn
+          </a>
+          <a
+            href="https://speakerdeck.com/relequestual"
+            target="_blank"
+            rel="noopener"
+            class="btn block text-green-700"
+          >
+            <font-awesome-icon :icon="['fab', 'speaker-deck']" />
+            Speaker Deck
+          </a>
+          <a
+            href="https://opencollective.com/json-schema"
+            target="_blank"
+            rel="noopener"
+            class="text-blue-500 btn block"
+          >
+            Open Collective
+          </a>
         </div>
       </div>
       <div>
@@ -45,15 +107,38 @@
 </template>
 
 <script>
+import Vue from 'vue';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faCoffee, faCheckDouble } from '@fortawesome/free-solid-svg-icons';
+import {
+  faTwitter,
+  faGithub,
+  faLinkedin,
+  faSpeakerDeck,
+} from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
+library.add(
+  faTwitter,
+  faGithub,
+  faLinkedin,
+  faSpeakerDeck,
+  faCoffee,
+  faCheckDouble
+);
+
+Vue.component('FontAwesomeIcon', FontAwesomeIcon);
+
 export default {
   head: {
     bodyAttrs: {
       class: 'bg-black',
     },
   },
-}
+};
 </script>
 
+<style src="@fortawesome/fontawesome-svg-core/styles.css"></style>
 <style>
 /* Sample `apply` at-rules with Tailwind CSS
 .container {
@@ -63,5 +148,9 @@ export default {
 
 .container {
   background-image: url('~/assets/greg-rakozy-oMpAz-DN-9I-unsplash.jpg?resize&size=1920');
+}
+
+.btn {
+  @apply p-2 mx-5 my-3 border-black font-extrabold text-center border bg-white hover:scale-110 duration-300 ease-in-out transform;
 }
 </style>

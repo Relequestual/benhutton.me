@@ -9,27 +9,26 @@ module.exports = {
   },
   extends: [
     '@nuxtjs',
-    'plugin:prettier/recommended',
+    // 'plugin:prettier/recommended',
     'plugin:nuxt/recommended',
-    "plugin:vue/essential",
-    "plugin:vue/recommended",
-    "eslint:recommended",
-    "prettier"
+    'plugin:vue/essential',
+    'plugin:vue/recommended',
+    'eslint:recommended',
+    'prettier',
   ],
-  plugins: [
-    "vue"
-  ],
+  plugins: ['vue', 'prettier'],
   // add your custom rules here
   rules: {
-    "vue/max-attributes-per-line": [
-      "error",
+    'prettier/prettier': 'error',
+    'vue/max-attributes-per-line': [
+      'error',
       {
-        "singleline": 5,
-        "multiline": {
-          "max": 1,
-          "allowFirstLine": true
-        }
-      }
-    ]
+        singleline: 5,
+        multiline: {
+          max: 1,
+          allowFirstLine: true,
+        },
+      },
+    ],
   },
-}
+};
