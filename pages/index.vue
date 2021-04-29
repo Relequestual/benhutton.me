@@ -1,15 +1,23 @@
 <template>
   <div
-    class="container bg-black bg-center bg-contain bg-no-repeat mx-auto grid min-h-screen justify-center"
+    class="container mx-auto flex bg-black bg-center bg-contain bg-no-repeat min-h-screen p-8"
   >
-    <div class="my-auto">
-      <img
-        class="mx-auto rounded-full -mb-7 border-2 border-white"
-        src="~/assets/face.jpg?resize&size=150"
-      />
-      <div class="border-2 border-white my-auto bg-gray-50 bg-opacity-50">
-        <h1 class="text-4xl text-center mb-4 mt-8">Ben Hutton</h1>
-        <div class="">
+    <div class="flex-1 flex items-center justify-center">
+      <!-- change the wrapping container width -->
+      <div
+        class="flex-1 max-w-2xl mx-auto border-2 border-white my-auto bg-gray-50 bg-opacity-50 relative"
+      >
+        <div class="absolute top-0 left-0 right-0">
+          <img
+            class="mx-auto w-24 h-24 md:w-36 md:h-36 rounded-full -mb-7 border-2 border-white transform -translate-y-2/4"
+            src="~/assets/face.jpg?resize&size=150"
+          />
+        </div>
+
+        <h1 class="text-4xl text-center mb-4 mt-12 md:mt-20">Ben Hutton</h1>
+
+        <!-- change the buttons containers width -->
+        <div class="max-w-md mx-auto">
           <a
             href="https://twitter.com/relequestual"
             target="_blank"
@@ -89,18 +97,19 @@
             Open Collective
           </a>
         </div>
-      </div>
-      <div>
-        Photo by
-        <a
-          href="https://unsplash.com/@grakozy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-          >Greg Rakozy</a
-        >
-        on
-        <a
-          href="https://unsplash.com/collections/9415895/for-json-schema/717d1c58e33fd8f0119ed72f768a584a?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-          >Unsplash</a
-        >
+
+        <div class="text-xs text-center mb-4">
+          Photo by
+          <a
+            href="https://unsplash.com/@grakozy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >Greg Rakozy</a
+          >
+          on
+          <a
+            href="https://unsplash.com/collections/9415895/for-json-schema/717d1c58e33fd8f0119ed72f768a584a?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >Unsplash</a
+          >
+        </div>
       </div>
     </div>
   </div>
