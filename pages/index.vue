@@ -1,20 +1,18 @@
 <template>
   <div
-    class="container mx-auto flex bg-black bg-center bg-contain bg-no-repeat min-h-screen p-8"
+    class="w-screen flex flex-col bg-black bg-main bg-center bg-cover bg-no-repeat min-h-screen"
   >
+    <img
+      class="mx-auto h-auto w-auto rounded-full border-2 border-white mt-3 -mb-10 z-50"
+      src="~/assets/face.jpg?resize&size=150"
+    />
     <div class="flex-1 flex items-center justify-center">
       <!-- change the wrapping container width -->
-      <div
-        class="flex-1 max-w-2xl mx-auto border-2 border-white my-auto bg-gray-50 bg-opacity-50 relative"
-      >
-        <div class="absolute top-0 left-0 right-0">
-          <img
-            class="mx-auto w-24 h-24 md:w-36 md:h-36 rounded-full -mb-7 border-2 border-white transform -translate-y-2/4"
-            src="~/assets/face.jpg?resize&size=150"
-          />
-        </div>
 
-        <h1 class="text-4xl text-center mb-4 mt-12 md:mt-20">Ben Hutton</h1>
+      <div
+        class="flex-1 max-w-lg mx-6 border-2 border-white my-auto bg-gray-50 bg-opacity-50 relative"
+      >
+        <h1 class="text-4xl text-center mb-4 mt-12">Ben Hutton</h1>
 
         <!-- change the buttons containers width -->
         <div class="max-w-md mx-auto">
@@ -155,7 +153,7 @@ export default {
 }
 */
 
-.container {
+.bg-main {
   background-image: url('~/assets/greg-rakozy-oMpAz-DN-9I-unsplash.jpg?resize&size=1920');
 }
 
