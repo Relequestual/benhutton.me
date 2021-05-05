@@ -43,14 +43,6 @@
             Dev
           </a>
           <a
-            href="https://jsonschema.dev"
-            target="_blank"
-            rel="noopener"
-            class="btn block"
-          >
-            JSON Schema Book
-          </a>
-          <a
             href="https://www.buymeacoffee.com/relequestual"
             target="_blank"
             rel="noopener"
